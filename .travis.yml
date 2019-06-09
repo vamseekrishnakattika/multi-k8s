@@ -1,6 +1,7 @@
 sudo: required
 services:
   - docker
+  
 before_install:
   - docker build -t vamseekrishnakattika/react-test -f ./client/Dockerfile.dev ./client
 
@@ -19,4 +20,3 @@ after_success:
   - docker push vamseekrishnakattika/multi-nginx
   - docker push vamseekrishnakattika/multi-server
   - docker push vamseekrishnakattika/multi-worker
-  
